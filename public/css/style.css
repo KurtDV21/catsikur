@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex; /* Show hamburger on small screens */
+  }
+
+  .nav-link {
+      display: none; /* Hide nav links by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position them absolutely */
+      top: 60px; /* Adjust according to your navbar height */
+      left: 0;
+      background-color: white; /* Background color for dropdown */
+      width: 100%;
+  }
+
+  .nav-link.active {
+      display: flex; /* Show links when active */
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+
+  
+  body {  
+    margin-top: -10px;
+    background: url(/image/background.png) no-repeat;
+    background-position: top right;
+    background-size: auto; 
+    background-color: #FFEFEF;
+    overflow-x: hidden;
+  }
+
+  .hamburger {
+    display: none; /* Initially hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+  /* navigation bar*/
+.logo{
+    width: 100px; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    margin-left: 20px;
+}
+
+  header {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  
+    
+  }
+
+
+  .navbar {
+    background-color: #92A8D1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    margin-right: 40px;
+    margin-top: 5px;   
+    z-index: 9999;
+  }
+  
+  .logo {
+    margin-right: auto; 
+  }
+  
+  .nav-container {
+    display: flex; 
+  }
+  
+  .nav-link {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+}
+
+.nav-link li {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 23px;
+    margin-top: 0; 
+    display: inline;
+    position: relative;
+    
+}
+
+
+
+.nav-link a {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    line-height: 40px; 
+}
+
+.nav-link a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #C3BEF0;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  
+  .nav-link a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .login-btn a{
+    text-decoration: none;
+  }
+/* --------------------------------------------------------------------------------------------------------------- */
+  /* LOGIN BUTTON */
+  .login-btn {
+    background-color: #C3BEF0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 20px; 
+    font-size: 23px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+    margin-right: 25px;
+}
+
+  .login-btn:hover {
+    background-color: #AFA2D0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+.main{
+  margin-top: 60px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-left: 90px; 
+  font-size: 60px; 
+  position: absolute;
+  height: auto; /* Allow height to adjust based on content */
+  margin-top: 100px;
+  
+}
+
+/* body text */
+.main .text1 {
+  margin-top: 100px;
+  position: static;
+  top: 500px;
+    left: auto;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: #92A8D1;
+    text-shadow:  -1px -1px 1px black,  
+    1px -1px 0 black,
+   -1px  1px 0 black,
+    1px  1px 0 black; ;
+    font-size: 70px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* adopt button */
+.adopt-btn-container{
+  position: relative;
+  margin-bottom: 20px;  
+  display: flex; 
+  flex-direction: inherit ; 
+  align-items: flex-start; 
+   margin-left: 135px;
+  font-size: 60px; 
+  top: 550px;
+  left: 40px;
+}
+
+.adopt-btn{
+    font-family: 'Aoboshi One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    background-color: #C3BEF0; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+    margin-right: 70px;
+    font-size: 35px;
+}
+
+ .button{
+         width: 455px;
+        height: 98px;
+}
+
+.adopt-btn:hover{
+    background-color: #AFA2D0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+/* dropdown style */
+/* Style the dropdown container */
+.arrow-down{
+  color: black; /* Color of the arrow icon */
+    width: 41.81px; /* Set width with units */
+    height: 33px; /* Set height with units */
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+
+.paint{
+  color: black;
+  width: 41px;
+  height: 33px;
+  position: relative;
+  top: 5px;
+  right: 140px;
+  
+}
+
+.gender{
+  color: black;
+  width: 41px;
+  height: 33px;
+  position: relative;
+  top: 5px;
+  right: 140px;
+}
+
+.arrow-down-1{
+  color: black;
+  width: 41px;
+  height: 33px;
+  position: relative;
+  top: 5px;
+  left: 30px;
+}
+
+.dropdowns {
+  position: relative;
+  display: flex; /* Align dropdowns horizontally */
+  gap: 60px; /* Space between the dropdowns */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 ;
+  top: 900px;
+  left: 150px;
+  
+}
+
+.dropdown {
+  position: relative; /* Positioning for the dropdown content */
+  display: inline-block; /* Allow for inline display */
+}
+
+.dropbtn {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center text inside the button */
+  align-items: center; /* Center items vertically */
+  text-align: center;
+  background-color: #AFA2D0; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  font-size: 22px; /* Button font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 240px; /* Fixed width */
+  height: 70px; /* Fixed height */
+}
+
+.button-text {
+  padding-right: 20px; /* Use padding instead of margin */
+  position: relative;
+  left: 50px;
+}
+
+
+.dropdown-content {
+  display: none; /* Hide dropdown content by default */
+  position: absolute; /* Position it below the button */
+  background-color: white; /* Background color of dropdown */
+  min-width: 160px; /* Minimum width of dropdown */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Shadow effect */
+  z-index: 1; /* Ensure it appears above other elements */
+  width: 240px;
+}
+
+.dropdown-content a {
+  color: black; /* Link text color */
+  padding: 12px 16px; /* Padding for links */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make links block elements */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+/* Show the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+}
+
+
+.dropdown-content.show {
+  display: block; /* Show when .show class is added */
+}
+
+.add-container{
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.addbtn{
+  font-family: 'Aoboshi One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    background-color: #C3BEF0; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+    margin-right: 70px;
+    font-size: 35px;
+    position: relative;
+    top: 820px;
+    left: 500px;
+}
+
+.addbtn:hover{
+  background-color: #AFA2D0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.avail{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  top: 900px;
+  font-size: 80px;
+}
+
+.cat-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  top: 1000px;
+}
+
+.cat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the card and button */
+  margin-bottom: 20px; /* Space between each cat wrapper */
+  justify-content: center;
+}
+
+.cat-card{
+    padding: 10px;
+    background-color: #92A8D1;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 312px;
+    height: 377px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.cat-image {
+  width: 100%; /* Make the image container full width */
+  height: 200px; /* Set a fixed height for the image */
+  overflow: hidden; /* Hide any overflow */
+  border-radius: 10px; /* Match the card's border radius */
+}
+
+.cat-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom spacing */
+  transition: transform 0.3s; /* Optional: add a hover effect to image */
+}
+
+.cat-image:hover img {
+  transform: scale(1.05); /* Optional: zoom effect on hover */
+}
+
+.adopt-btn1 {
+  font-family: 'Aoboshi One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  width: 500px; /* Match the button width with the card */
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #92A8D1;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn1:hover {
+  background-color: #3A5A85;
+}
+
+h1{
+  text-align: center; /* Center the heading */
+  font-size: 2.5em; /* Increase font size */
+  margin-bottom: 20px; /* Add space below the heading */
+  color: #4A6FA5; /* Optional: Change the text color */
+  font-family: 'Montserrat', sans-serif; /* Apply a custom font */
+}
+
+
+
+.footer {
+  background-color: #F7C9CB; /* Pink background */
+  padding: 70px;
+  position: relative;
+  top: 1300px;
+  height: 487px;
+}
+
+.footer-container {
+  display: flex;                 /* Use flexbox for layout */
+  justify-content: flex-start; /* Space between sections */
+  align-items: center;          /* Center items vertically */
+  max-width: 1200px;            /* Maximum width of the footer */
+  margin: 0 auto;               /* Center the footer on the page */
+  padding: 20px;   
+}
+
+.footer-about {
+  position: relative;
+  left: 650px;
+  width: 40%;                  /* Width of the about section */
+    text-align: left;           /* Align text to the right */
+    display: flex;               /* Use flexbox */
+    flex-direction: column;      /* Stack items vertically */
+    justify-content: center; 
+}
+
+
+.mess{
+  position: relative;
+  top: 100px;
+  left: 300px;
+}
+
+.mess-icon{
+  position: relative;
+  top: 50px;
+  right: 50px;
+}
+
+.fb-icon{
+  position: relative;
+  top: 150px;
+  left: 200px;
+}
+
+
+.footer-about h3 {
+  justify-content: flex-end;
+  font-size: 37px;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+
+
+.footer-left-text {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+}
+
+.footer-left-text p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.footer-about .para{
+  width: 729px;
+  height: 145px;
+}
+
+.details {
+  display: flex;               /* Use flexbox for the details container */
+  flex-direction: column;      /* Stack items vertically */
+  gap: 20px;                  /* Space between items */
+  margin-bottom: 30px;
+}
+
+.details > div {
+  display: flex;               /* Use flexbox for each detail item */
+  align-items: center;         /* Center items vertically */
+  margin-bottom: 30px;
+  margin-left: 10px;
+  gap: 30px;
+}
+
+.place-icon,
+.phone-icon,
+.email-icon {
+  margin-right: 10px;         /* Space between icon and paragraph */
+  width: 24px;                /* Set a fixed width for icons */
+  height: 24px;               /* Set a fixed height for icons */
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  bottom: 225px;
+  right: 150px;
+  margin-bottom: 20px;
+}
+

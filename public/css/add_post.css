@@ -1,0 +1,31 @@
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-box input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.btn {
+    padding: 10px 15px;
+    background-color: #007BFF; /* Change as per your color scheme */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

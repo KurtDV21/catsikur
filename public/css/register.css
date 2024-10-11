@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/image/paws.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #FFEFEF;  
+    overflow-x: hidden;  
+}
+
+  /* navigation bar*/
+.logo{
+  width: 100px; /* Set the width */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  margin-left: 20px;
+}
+
+  header {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px auto;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .navbar {
+    background-color: #92A8D1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 5px;   
+    z-index: 9999;
+  }
+  
+  .logo {
+    margin-right: auto; 
+  }
+  
+  .nav-container {
+    display: flex; 
+  }
+  
+  .nav-link {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+}
+
+.nav-link li {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 23px;
+    margin-top: 0; 
+    display: inline;
+    position: relative;
+}
+
+
+
+.nav-link a {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    line-height: 40px; 
+}
+
+.nav-link a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #C3BEF0;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  
+  .nav-link a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .login-btn a{
+    text-decoration: none;
+  }
+/* --------------------------------------------------------------------------------------------------------------- */
+  /* LOGIN BUTTON */
+  .login-btn {
+    background-color: #C3BEF0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 23px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+  .login-btn:hover {
+    background-color: #AFA2D0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+
+  .wrapper{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    background-color: #E9CECA;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #91B1E2;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+   
+    }
+
+.wrapper .form-box{
+   
+   
+}
+
+
+  
+  
+  .form-box h2{
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 2px solid  black;
+    margin: 30px 0;
+    border-radius: 10px;
+  }
+
+  .input-box label{
+    position: absolute;
+    top:  50%;
+    left: 5px;
+    transform: translateY(-75%);
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+  }
+
+  .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 55px;
+  }
+
+.remember-forgot{
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-account{
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.admin-account:hover{
+    text-decoration: underline;
+}
+
+.remember-forgot label a{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: #E9CECA;
+    accent-color: black;
+    margin-right: 10px;
+}
+
+.remember-forgot a {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: #E9CECA;
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(to bottom, #92A8D1, #4A6FA5);
+}
+
+.login-register{
+   position: relative;
+   top: 15px;
+}
+
+.login-register p{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #000;
+    
+}
+
+.register-link {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 25px; 
+    font-style: italic;
+    color: #9C9897;
+    text-decoration: none; 
+}
+
+.register-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+

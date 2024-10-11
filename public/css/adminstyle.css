@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #FFEFEF;
+    
+  }
+
+   /* navigation bar*/
+.logo{
+    width: 100px; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  header {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+  }
+  
+  .logo {
+    margin-right: auto; 
+  }
+  
+  .nav-container {
+    display: flex; 
+  }
+  
+  .nav-link {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+}
+
+.nav-link li {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 23px;
+    margin-top: 0; 
+    display: inline;
+    position: relative;
+    right: 25px;
+}
+
+
+
+.nav-link a {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    line-height: 40px; 
+}
+
+.nav-link a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #C3BEF0;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  
+  .nav-link a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .login-btn a{
+    text-decoration: none;
+  }
+/* --------------------------------------------------------------------------------------------------------------- */
+  /* LOGIN BUTTON */
+  .login-btn {
+    background-color: #C3BEF0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 23px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    align-self: center; 
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+  .login-btn:hover {
+    background-color: #AFA2D0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between sidebar and card */
+}
+
+/* Background Card */
+.background-card {
+    width: 1000px;
+    height: auto; /* Change to auto to fit content */
+    background-color: #F4E4DE;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+
+h2 {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-placeholder img {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.left-text-container {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px ;
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Centers items vertically */
+    margin-right: 650px; /* Add some space from the left edge */
+}
+
+.calendar-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 10px; /* Space between button and text */
+}
+
+.calendar-icon {
+    width: 26px; /* Set width for the icon */
+    height: 26px; /* Set height for the icon */
+}
+
+
+
+/* Application Card for Approval Section */
+.approval-card {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background-color: #FFEFEF;
+    border-radius: 15px;
+    padding: 40px;
+    border: 1px solid #e5d4d1;
+    margin-left: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 670px; /* Ensure card takes full width */
+}
+
+.approval-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 150px;
+}
+
+.header-separator {
+    width: 100%; /* Ensure the line spans full width */
+    height: 2px; /* Set the height of the line */
+    background-color: black; /* Set the color of the line */
+    margin-bottom: 10px;
+}
+
+
+/* Individual Application Card Style */
+.approval-item-container {
+    display: flex; /* Aligns adopter info and approval item side by side */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px; /* Space between items */
+    
+}
+
+.adopter-info {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between adopter info and approval item */
+}
+
+.profile-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 16px; /* Adjust font size as needed */
+    font-family: 'Inter', sans-serif;
+}
+
+.approval-item {
+    width: 80%;
+    flex-grow: 1; /* Allow the approval item to take remaining space */
+    background-color: #FFEFEF;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+
+.cat-profile {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.cat-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.cat-details p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.application-info {
+    display: flex;
+    justify-content: space-between; /* Space between the cat profile and actions */
+    align-items: center; /* Aligns items vertically in the center */
+    width: 100%; /* Allow full width for proper spacing */
+    height: 60px; /* Set a height to help with alignment */
+}
+
+.actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust space between buttons */
+    align-items: center; /* Center buttons horizontally */
+}   
+
+/* General button styles */
+.actions button {
+    font-size: 25px; /* Larger font size for bigger icons */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 35px; /* Large width for circular buttons */
+    height: 35px; /* Large height for circular buttons */
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    transition: background-color 0.3s; /* Optional: smooth hover effect */
+}
+
+/* Approve button style */
+.approve-button {
+    background-color: #a3eba3; /* Green */
+    color: #333; /* Icon color */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Deny button style */
+.deny-button {
+    background-color: #f58181; /* Red */
+    color: #333; /* Icon color */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effects for each button */
+.approve-button:hover {
+    background-color: #9be19b; /* Slightly darker green on hover */
+}
+
+.deny-button:hover {
+    background-color: #e86a6a; /* Slightly darker red on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #F7C9CB;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 500px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Align sections with space between */
+    max-width: 1200px; /* Maximum width for footer */
+    margin: 0 auto; /* Center footer content */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  }
+  
+  .footer-section {
+    flex: 1; /* Each section gets equal space */
+    padding: 20px; /* Padding around each section */
+    min-width: 200px; /* Minimum width for sections */
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 20px; /* Text size */
+    line-height: 1.0; /* Line height for readability */
+  }
+  
+  
+  /* Align About the Company section to the left */
+  .about-company {
+      text-align: left; /* Align text to the left within this section */
+      margin-right: 250px;
+      color: black;
+  
+  }
+  
+  .footer-section h3 {
+    font-size: 30px; /* Title size */
+    margin-bottom: 15px; /* Space below title */
+    
+  }
+  
+  /* Align social media icons below About the Company */
+  .social-media {
+      display: flex; /* Use flexbox for alignment */
+      justify-content: flex-start; /* Align icons to start (left) */
+      list-style: none; /* Remove bullet points */
+      padding: 0; /* Remove padding */
+      margin-top: 10px; /* Space above social media icons */
+  }
+  
+  .social-media li {
+      margin-right: 10px; /* Space between social media icons */
+  }
+  
+  .social-media img {
+      width: 40px; /* Adjust size as needed */
+      height: auto; /* Keep aspect ratio */
+  }
+  
+  .social-media2 {
+    list-style: none; /* Remove bullet points */
+  }
+  
+  
+  .social-media2 li {
+    align-self: center; /* Vertically center individual list items if needed */
+  }
+  
+  .social-media2 img {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    margin-top: 30px;
+  }
+  
+  .other-section {
+      text-align: left; /* Align text in Other Section to the right */
+      margin-left: 10px;
+  }
+  
+  .footer-bottom-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Distribute space between the sections */
+    align-items: center; /* Center items vertically */
+    padding: 0 150px; /* Optional: Add padding to the sides */
+    margin-top: 20px; /* Space above the footer bottom */
+    flex-direction: row-reverse; 
+}
+
+.footer-bottom {
+    text-align: right; /* Align text to the right */
+    font-size: 17px; /* Font size for footer bottom */
+    color: #050505; /* Text color */
+}
+
+.footer-bottom-name {
+    text-align: left; /* Align text to the left */
+    font-size: 25px; /* Font size for footer bottom */
+    color: #050505; /* Text color */
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px;
+    padding: 0 20px; /* Add some padding for spacing */
+}
+
+.prev-button, .next-button {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #ddd;
+}
+  
+
+
